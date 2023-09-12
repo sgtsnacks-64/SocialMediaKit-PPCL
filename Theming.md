@@ -206,6 +206,25 @@ In the following example, we have a component that contains a Label control. We 
 
 Notice if you observe the default "Property" record from the component, the Controls records are populated with all the same properties you find in the "Default" configuration. However, when specifing overrides into the component, not all properties have to be addressed. In the example above, we're only assigning the **Text Colour** of **label** to **Color.Red**. 
 
+Each component has a ReadMe text input property, which denotes the controls that can be overidden:
+
+```javascript
+/*
+
+****Toolbar Component****
+****The Social Media Kit****
+
+Controls that can be overidden:
+
++ Gallery
++ TextInput
++ Icon
++ Label
+...
+
+*/
+```
+
 ## How to use the Properties Record in your app
 
 It makes little sense to have individual Properties Records configured on each component in an app, as this would exponentially increase the administration of theming. So it's advised to set the contents of the "Properies Record" to either a Global Variable, or a Collection if you wish to offer more than one theme to your users. This can be done in App.OnStart(), a Screen.OnVisible() or via another behaviour method.

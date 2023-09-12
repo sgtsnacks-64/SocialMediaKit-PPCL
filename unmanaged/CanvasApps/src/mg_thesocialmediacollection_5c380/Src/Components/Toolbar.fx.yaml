@@ -1,0 +1,351 @@
+Toolbar As CanvasComponent:
+    Fill: =Coalesce(Toolbar.Properties.Controls.Gallery.Colours.Background, Toolbar.Properties.Colours.Background)
+    Height: =64
+    Items: |-
+        =[
+            {
+                Title: "Home",
+                Icon: Icon.Home,
+                TargetScreen: App.ActiveScreen
+            },
+            {
+                Title: "My Network",
+                Icon: Icon.People,
+                TargetScreen: Blank()
+            },
+            {
+                Title: "New Post",
+                Icon: Icon.AddDocument,
+                TargetScreen: Blank()
+            },
+            {
+                Title: "Another option",
+                Icon: Icon.Help,
+                TargetScreen: Blank()
+            },
+            {
+                Title: "About",
+                Icon: Icon.LightningBolt,
+                TargetScreen: Blank()
+            }
+        ]
+    Properties: |-
+        ={
+            /*
+                    -----Default Style information, Will apply to all controls unless specified in the controls field below.
+            */
+            Colours: {
+                Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
+                Secondary: ColorValue("#555555"),       //Covers 
+                Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
+                Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
+                Text: Color.Black
+            },
+            Style: {
+                Borders: {
+                    Thickness: 1,
+                    FocusThickness: 1.0,
+                    Radius: {
+                        TopLeft: 0,
+                        TopRight: 0,
+                        BottomLeft: 0,
+                        BottomRight: 0
+                    }
+                },
+                Font: {
+                    'Font-Family': Font.'Open Sans',
+                    Sizes: {
+                        Heading: 28,
+                        Action: 16,
+                        Text: 17
+                    }
+                }
+            },
+            /*
+                    ----End of Default configuration
+            */
+            Controls: {
+                /*
+                        -----Overrides for individual control types in components. Options specified here will override the default options above.
+                */
+                Label: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Toggle: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222")
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Action: 16
+                            }
+                        }
+                    }
+                },
+                TextInput: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17    
+                            }
+                        }
+                    }
+                },
+                Image: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            Colour: ColorValue("#555555"),
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        }
+                    }
+                },
+                Bubble: {
+                    Colours: {Background: ColorValue("#ffffff"), Border: ColorValue("#222222"),Text: Color.Black},
+                    Style: {
+                        Borders: {
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            },
+                            Thickness: 0
+                        }
+                    }
+                },
+                Dropdown: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Gallery: {
+                    Colours: {
+                        Primary: ColorValue("#ffffff"),
+                        Secondary: ColorValue("#005d99"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        }
+                    }
+                }
+            }
+        }
+    ReadMe: |-
+        =/*
+        
+        ****Toolbar Component****
+        
+        Mike Gowland - 2023
+        
+        
+        --Purpose
+        
+        Displays a Horizontal Gallery with clickable icons. 
+        
+        --Inputs
+        
+        Properties:
+            A record property containing configurable properties like colours, typography etc.
+        
+        HeadingText: 
+            Sets the header's text that's displayed.
+        
+        ReadMe:
+            This ReadMe
+        
+        Functions:
+        
+        Interpolate String:
+            Interpolates a string using Replacement Tags and a Tag/Value table.
+        
+            Parameters: 
+                -Tags [Table]:
+                    A table of records containing replacement tags and values:
+                        Example:
+                            Table(
+                                {
+                                    Tag: "#Name#",
+                                    Value: User().FullName
+                                })
+                
+                -Text2Interpolate [Text]:
+                    A string of text containing replacement tags to interpolate with the Tags table
+                        Example:
+                            "Hello #Name#"
+        
+            Output:
+                [Text] - The Interpolated String
+                    Example:
+                        "Hello John Smith"
+        
+        
+        */
+    ToolbarProperties: |-
+        ={
+            'Indicator Location': "top",
+            'Show Text': true,
+            'Show Icon': true,
+            'Indicator Width %': 50%
+        }
+    UseModernTheming: =false
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    galToolbar_1 As gallery.galleryHorizontal:
+        Default: =LookUp(Self.AllItems, ThisRecord.TargetScreen = App.ActiveScreen)
+        FocusedBorderThickness: =0
+        Height: =Parent.Height
+        ItemAccessibleLabel: =ThisItem.Title
+        Items: =Toolbar.Items
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(ThisItem.TargetScreen)
+        ShowScrollbar: =false
+        TabIndex: =0
+        TemplateFill: =ColorFade(Coalesce(Toolbar.Properties.Controls.Gallery.Colours.Background, Toolbar.Properties.Colours.Background),((Or(ThisItem.IsSelected, App.ActiveScreen = ThisItem.TargetScreen) * 20)) / 100)
+        TemplatePadding: =0
+        TemplateSize: =IfError(Self.Width / Self.AllItemsCount, Parent.Width)
+        Width: =App.Width
+        ZIndex: =1
+
+        icoToolbarIcon_1 As icon.Add:
+            Color: =If(Toolbar.UseModernTheming, App.Theme.Colors.Primary, Coalesce(Toolbar.Properties.Controls.Gallery.Colours.Secondary, Toolbar.Properties.Colours.Secondary))
+            Height: =28
+            Icon: =ThisItem.Icon
+            OnSelect: =Select(Parent)
+            Visible: =Toolbar.ToolbarProperties.'Show Icon'
+            Width: =Parent.TemplateWidth
+            X: =Parent.TemplateWidth / 2 - Self.Width / 2
+            Y: =If(((Parent.Height / 2 - Self.Height / 2) + Self.Height) > lblToolbarTitle_1.Y,5,(Parent.Height / 2 - Self.Height / 2))
+            ZIndex: =1
+
+        lblToolbarTitle_1 As label:
+            Align: =Align.Center
+            Color: =If(Toolbar.UseModernTheming, Color.Black, Coalesce(Toolbar.Properties.Controls.Label.Colours.Text, Toolbar.Properties.Colours.Text))
+            Height: =32
+            OnSelect: =Select(Parent)
+            Size: =Toolbar.Properties.Style.Font.Sizes.Action
+            Text: =ThisItem.Title
+            Visible: =Toolbar.ToolbarProperties.'Show Text'
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =2
+
+        Rectangle2_1 As rectangle:
+            Fill: =icoToolbarIcon_1.Color
+            Height: =2
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected || App.ActiveScreen.Name = ThisItem.TargetScreen.Name
+            Width: =Parent.TemplateWidth * Toolbar.ToolbarProperties.'Indicator Width %'
+            X: =Parent.TemplateWidth /2  - Self.Width / 2
+            Y: =(Parent.TemplateHeight - Self.Height) * (Lower(Toolbar.ToolbarProperties.'Indicator Location') = "bottom")
+            ZIndex: =3
+

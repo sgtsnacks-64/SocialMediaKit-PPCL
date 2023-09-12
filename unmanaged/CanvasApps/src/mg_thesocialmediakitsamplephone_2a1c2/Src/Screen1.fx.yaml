@@ -1,0 +1,11 @@
+Screen1 As screen:
+
+    Label3 As label:
+        Height: =70
+        Size: =12
+        Text: ="Text"
+        Width: =Sum(Len(Self.Text), 2)*12
+        X: =45
+        Y: =205
+        ZIndex: =1
+

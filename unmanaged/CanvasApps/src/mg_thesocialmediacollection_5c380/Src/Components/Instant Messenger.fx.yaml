@@ -1,0 +1,344 @@
+"'Instant Messenger' As CanvasComponent":
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Properties: |-
+        ={
+            /*
+                    -----Default Style information, Will apply to all controls unless specified in the controls field below.
+            */
+            Colours: {
+                Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
+                Secondary: ColorValue("#555555"),       //Covers 
+                Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
+                Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
+                Text: Color.Black
+            },
+            Style: {
+                Borders: {
+                    Thickness: 1,
+                    FocusThickness: 1.0,
+                    Radius: {
+                        TopLeft: 0,
+                        TopRight: 0,
+                        BottomLeft: 0,
+                        BottomRight: 0
+                    }
+                },
+                Font: {
+                    'Font-Family': Font.'Open Sans',
+                    Sizes: {
+                        Heading: 28,
+                        Action: 16,
+                        Text: 17
+                    }
+                }
+            },
+            /*
+                    ----End of Default configuration
+            */
+            Controls: {
+                /*
+                        -----Overrides for individual control types in components. Options specified here will override the default options above.
+                */
+                Label: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Toggle: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222")
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Action: 16
+                            }
+                        }
+                    }
+                },
+                TextInput: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17    
+                            }
+                        }
+                    }
+                },
+                Image: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            Colour: ColorValue("#555555"),
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        }
+                    }
+                },
+                Bubble: {
+                    Colours: {Background: ColorValue("#ffffff"), Border: ColorValue("#222222"),Text: Color.Black},
+                    Style: {
+                        Borders: {
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            },
+                            Thickness: 0
+                        }
+                    }
+                },
+                Dropdown: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Gallery: {
+                    Colours: {
+                        Primary: ColorValue("#ffffff"),
+                        Secondary: ColorValue("#005d99"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        }
+                    }
+                }
+            }
+        }
+    Transcript: |
+        =[
+            {
+                MessageContent: "Hello!",
+                User: {
+                    FullName: "Mike Gowland",
+                    Email: "Mike.Gowland@example.com",
+                    Image: User().Image
+                },
+                DateTime: DateAdd(Now(),-5,TimeUnit.Minutes),
+                EditStatus: false,
+                Type: "Sent"
+            }]
+    UseModernTheming: =false
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Fill: =If('Instant Messenger'.UseModernTheming, RGBA(0,0,0,0), Coalesce('Instant Messenger'.Properties.Colours.Background, RGBA(0,0,0,0)))
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Gallery2 As gallery.variableTemplateHeightGallery:
+            Fill: =RGBA(0,0,0,0)
+            Items: ='Instant Messenger'.Transcript
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =280
+            ZIndex: =1
+
+            Container3 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =Container4.Height + 20
+                LayoutGap: =10
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =Parent.TemplateWidth - 20
+                X: =Parent.TemplateWidth / 2 - Self.Width / 2 - 10
+                Y: =10
+                ZIndex: =1
+
+                imgUser As image:
+                    Height: =32
+                    Image: =ThisItem.User.Image
+                    LayoutMinHeight: =320
+                    LayoutMinWidth: =320
+                    RadiusBottomLeft: =Coalesce('Instant Messenger'.Properties.Controls.Image.Style.Borders.Radius.BottomLeft, 'Instant Messenger'.Properties.Style.Borders.Radius.BottomLeft)
+                    RadiusBottomRight: =Coalesce('Instant Messenger'.Properties.Controls.Image.Style.Borders.Radius.BottomRight, 'Instant Messenger'.Properties.Style.Borders.Radius.BottomRight)
+                    RadiusTopLeft: =Coalesce('Instant Messenger'.Properties.Controls.Image.Style.Borders.Radius.TopLeft, 'Instant Messenger'.Properties.Style.Borders.Radius.TopLeft)
+                    RadiusTopRight: =Coalesce('Instant Messenger'.Properties.Controls.Image.Style.Borders.Radius.TopRight, 'Instant Messenger'.Properties.Style.Borders.Radius.TopRight)
+                    Visible: =ThisItem.Type = "Sent"
+                    Width: =32
+                    ZIndex: =1
+
+                Container4 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    BorderColor: =If('Instant Messenger'.UseModernTheming, App.Theme.Colors.Primary, Coalesce('Instant Messenger'.Properties.Controls.Bubble.Colours.Border, 'Instant Messenger'.Properties.Colours.Border))
+                    BorderThickness: =Coalesce('Instant Messenger'.Properties.Controls.Bubble.Style.Borders.Thickness, 'Instant Messenger'.Properties.Style.Borders.Thickness)
+                    DropShadow: =DropShadow.Regular
+                    Fill: =htmMessageContent.Fill
+                    Height: =htmMessageContent.Height + Label2.Height
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =112
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =Coalesce('Instant Messenger'.Properties.Controls.Bubble.Style.Borders.Radius.BottomLeft, 'Instant Messenger'.Properties.Style.Borders.Radius.BottomLeft)
+                    RadiusBottomRight: =Coalesce('Instant Messenger'.Properties.Controls.Bubble.Style.Borders.Radius.BottomRight, 'Instant Messenger'.Properties.Style.Borders.Radius.BottomRight)
+                    RadiusTopLeft: =Coalesce('Instant Messenger'.Properties.Controls.Bubble.Style.Borders.Radius.TopLeft, 'Instant Messenger'.Properties.Style.Borders.Radius.TopLeft)
+                    RadiusTopRight: =Coalesce('Instant Messenger'.Properties.Controls.Bubble.Style.Borders.Radius.TopRight, 'Instant Messenger'.Properties.Style.Borders.Radius.TopRight)
+                    ZIndex: =3
+
+                    htmMessageContent As htmlViewer:
+                        AutoHeight: =true
+                        Color: =Coalesce('Instant Messenger'.Properties.Controls.Label.Colours.Secondary, 'Instant Messenger'.Properties.Colours.Secondary)
+                        Fill: =If('Instant Messenger'.UseModernTheming, App.Theme.Colors.Lighter80, Coalesce('Instant Messenger'.Properties.Controls.Bubble.Colours.Background, 'Instant Messenger'.Properties.Colours.Background, RGBA(0,0,0,0)))
+                        Height: =70
+                        HtmlText: =ThisItem.MessageContent
+                        LayoutMinHeight: =70
+                        LayoutMinWidth: =560
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        Size: ='Instant Messenger'.Properties.Style.Font.Sizes.Text
+                        Width: =560
+                        ZIndex: =1
+
+                    Label2 As label:
+                        Align: =Align.Right
+                        Color: =RGBA(0, 0, 0, 1 * 0.5)
+                        Fill: =htmMessageContent.Fill
+                        Font: ='Instant Messenger'.Properties.Style.Font.'Font-Family'
+                        Height: =30
+                        LayoutMinHeight: =70
+                        LayoutMinWidth: =560
+                        PaddingRight: =10
+                        Size: ='Instant Messenger'.Properties.Style.Font.Sizes.Action
+                        Text: |-
+                            =Text(ThisItem.DateTime,"hh:mm","en-GB")
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                imgContact As image:
+                    Height: =32
+                    Image: =ThisItem.User.Image
+                    LayoutMinHeight: =320
+                    LayoutMinWidth: =320
+                    RadiusBottomLeft: =100
+                    RadiusBottomRight: =100
+                    RadiusTopLeft: =100
+                    RadiusTopRight: =100
+                    Visible: =ThisItem.Type = "Received"
+                    Width: =32
+                    ZIndex: =4
+

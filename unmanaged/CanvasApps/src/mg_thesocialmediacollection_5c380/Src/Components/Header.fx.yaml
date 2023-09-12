@@ -1,0 +1,390 @@
+Header As CanvasComponent:
+    Fill: =Coalesce(Header.Properties.Colours.Background,RGBA(0,0,0,0))
+    HeaderProperties: |-
+        ={
+            'Header Text': "",          //In title mode, this will be displayed in the Label
+            Image: User().Image,        
+            Icon: Icon.Message,         //Define a built in Icon here
+            IconImage: Blank(),//SampleImage,     //To use built in icon, set this property as Blank()
+            'Right Icon':
+            {
+                Behavior: "Navigate",    //To navigate to Target Screen, set to "Navigate", else will toggle "RightIconStatus" property
+                'Target Screen': App.ActiveScreen
+            },
+            'Left Icon':
+            {
+                Behavior: "Toggle",    //To navigate to Target Screen, set to "Navigate", else will toggle "LeftIconStatus" property
+                'Target Screen': App.ActiveScreen
+            }
+        }
+    Height: =64
+    LeftIconSelected: =gvLeftIconStatus
+    OnReset: =
+    Properties: |-
+        ={
+            /*
+                    -----Default Style information, Will apply to all controls unless specified in the controls field below.
+            */
+            Colours: {
+                Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
+                Secondary: ColorValue("#555555"),       //Covers 
+                Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
+                Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
+                Text: Color.Black
+            },
+            Style: {
+                Borders: {
+                    Thickness: 1,
+                    FocusThickness: 1.0,
+                    Radius: {
+                        TopLeft: 0,
+                        TopRight: 0,
+                        BottomLeft: 0,
+                        BottomRight: 0
+                    }
+                },
+                Font: {
+                    'Font-Family': Font.'Open Sans',
+                    Sizes: {
+                        Heading: 28,
+                        Action: 16,
+                        Text: 17
+                    }
+                }
+            },
+            /*
+                    ----End of Default configuration
+            */
+            Controls: {
+                /*
+                        -----Overrides for individual control types in components. Options specified here will override the default options above.
+                */
+                Label: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Toggle: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222")
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Action: 16
+                            }
+                        }
+                    }
+                },
+                TextInput: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17    
+                            }
+                        }
+                    }
+                },
+                Image: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            Colour: ColorValue("#555555"),
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        }
+                    }
+                },
+                Bubble: {
+                    Colours: {Background: ColorValue("#ffffff"), Border: ColorValue("#222222"),Text: Color.Black},
+                    Style: {
+                        Borders: {
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            },
+                            Thickness: 0
+                        }
+                    }
+                },
+                Dropdown: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Gallery: {
+                    Colours: {
+                        Primary: ColorValue("#ffffff"),
+                        Secondary: ColorValue("#005d99"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        }
+                    }
+                }
+            }
+        }
+    ReadMe: |-
+        =/*
+        
+        ****Header Component****
+        
+        Mike Gowland - 2023
+        
+        
+        --Purpose
+        
+        Displays a neat header at the top of the application and uses the HeadingText property to display text on the header.
+        
+        --Inputs
+        
+        Properties:
+            A record property containing configurable properties like colours, typography etc.
+        
+        HeadingText: 
+            Sets the header's text that's displayed.
+        
+        ReadMe:
+            This ReadMe
+        
+        Functions:
+        
+        Interpolate String:
+            Interpolates a string using Replacement Tags and a Tag/Value table.
+        
+            Parameters: 
+                -Tags [Table]:
+                    A table of records containing replacement tags and values:
+                        Example:
+                            Table(
+                                {
+                                    Tag: "#Name#",
+                                    Value: User().FullName
+                                })
+                
+                -Text2Interpolate [Text]:
+                    A string of text containing replacement tags to interpolate with the Tags table
+                        Example:
+                            "Hello #Name#"
+        
+            Output:
+                [Text] - The Interpolated String
+                    Example:
+                        "Hello John Smith"
+        
+        
+        */
+    RightIconSelected: =gvRightIconStatus
+    Text: =TextInput1_2.Text
+    UseModernTheming: =false
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container2_2 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =10
+        PaddingLeft: =25
+        PaddingRight: =25
+        PaddingTop: =10
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Image2_2 As image:
+            BorderColor: =If(Header.UseModernTheming,App.Theme.Colors.Primary, Coalesce(Header.Properties.Controls.Image.Colours.Border,Header.Properties.Colours.Border))
+            BorderThickness: =Coalesce(Header.Properties.Controls.Image.Style.Borders.Thickness, Header.Properties.Style.Borders.Thickness)
+            Fill: =Coalesce(Header.Properties.Controls.Image.Colours.Background, Header.Properties.Colours.Background)
+            Height: =Parent.Height - Parent.PaddingTop * 2
+            Image: =Header.HeaderProperties.Image
+            LayoutMinHeight: =320
+            LayoutMinWidth: =320
+            OnSelect: |-
+                =If(Lower(Header.HeaderProperties.'Left Icon'.Behavior) <> "navigate",
+                    Set(gvLeftIconStatus, !Coalesce(gvLeftIconStatus, false)),
+                    Navigate(Header.HeaderProperties.'Left Icon'.'Target Screen'))
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Width: =Self.Height
+            ZIndex: =1
+
+        TextInput1_2 As text:
+            BorderColor: =If(Header.UseModernTheming, App.Theme.Colors.Primary,Coalesce(Header.Properties.Controls.TextInput.Colours.Border, Header.Properties.Colours.Border))
+            BorderThickness: |-
+                =Coalesce(
+                    Header.Properties.Controls.TextInput.Style.Borders.Thickness,
+                    Header.Properties.Style.Borders.Thickness
+                )
+            Color: =If(Header.UseModernTheming, Color.Black,Coalesce(Header.Properties.Controls.TextInput.Colours.Text, Header.Properties.Colours.Text))
+            Default: =
+            DisplayMode: =DisplayMode.View
+            Fill: =If(Header.UseModernTheming,RGBA(0,0,0,0), Coalesce(Header.Properties.Controls.TextInput.Colours.Background,Header.Properties.Colours.Background))
+            Font: =Header.Properties.Style.Font.'Font-Family'
+            Height: =Image2_2.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor,30%)
+            HoverFill: =ColorFade(Self.BorderColor,90%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: |-
+                =Min(
+                    Max(
+                        Parent.Width - Self.X - Icon1_2.Width - Parent.PaddingLeft * 2,
+                        128
+                    ),
+                    512
+                )
+            OnChange: =
+            RadiusBottomLeft: =Coalesce(Header.Properties.Controls.TextInput.Style.Borders.Radius.BottomLeft, Header.Properties.Style.Borders.Radius.BottomLeft)
+            RadiusBottomRight: =Coalesce(Header.Properties.Controls.TextInput.Style.Borders.Radius.BottomRight, Header.Properties.Style.Borders.Radius.BottomRight)
+            RadiusTopLeft: =Coalesce(Header.Properties.Controls.TextInput.Style.Borders.Radius.TopLeft, Header.Properties.Style.Borders.Radius.TopLeft)
+            RadiusTopRight: =Coalesce(Header.Properties.Controls.TextInput.Style.Borders.Radius.TopRight, Header.Properties.Style.Borders.Radius.TopRight)
+            Size: =Header.Properties.Style.Font.Sizes.Text
+            Width: =Min(450,Parent.Width * 0.66)
+            ZIndex: =2
+
+        Icon1_2 As icon.Message:
+            Color: =If(Header.UseModernTheming, App.Theme.Colors.Primary,Header.Properties.Colours.Primary)
+            Height: =Image2_2.Height
+            Icon: =Header.HeaderProperties.Icon
+            OnSelect: =
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =IsBlank(Image1_2.Image)
+            Width: =Self.Height
+            ZIndex: =3
+
+        Image1_2 As image:
+            BorderColor: =If(Header.UseModernTheming, App.Theme.Colors.Primary,Coalesce(Header.Properties.Controls.Image.Colours.Border, Header.Properties.Colours.Border))
+            BorderThickness: =Coalesce(Header.Properties.Controls.Image.Style.Borders.Thickness, Header.Properties.Style.Borders.Thickness)
+            Height: =Icon1_2.Height
+            Image: =Header.HeaderProperties.IconImage
+            LayoutMinHeight: =320
+            LayoutMinWidth: =320
+            OnSelect: |-
+                =If(Lower(Header.HeaderProperties.'Right Icon'.Behavior) <> "navigate",
+                    Set(gvRightIconStatus, !Coalesce(gvRightIconStatus, false)),
+                    Navigate(Header.HeaderProperties.'Right Icon'.'Target Screen'))
+            RadiusBottomLeft: |
+                =Coalesce(Header.Properties.Controls.Image.Style.Borders.Radius.BottomLeft, Header.Properties.Style.Borders.Radius.BottomLeft)
+            RadiusBottomRight: |
+                =Coalesce(Header.Properties.Controls.Image.Style.Borders.Radius.BottomRight, Header.Properties.Style.Borders.Radius.BottomRight)
+            RadiusTopLeft: |
+                =Coalesce(Header.Properties.Controls.Image.Style.Borders.Radius.TopLeft, Header.Properties.Style.Borders.Radius.TopLeft)
+            RadiusTopRight: |
+                =Coalesce(Header.Properties.Controls.Image.Style.Borders.Radius.TopRight, Header.Properties.Style.Borders.Radius.TopRight)
+            Visible: =!IsBlank(Header.HeaderProperties.IconImage)
+            Width: =Icon1_2.Width
+            ZIndex: =4
+

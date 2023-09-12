@@ -1,0 +1,52 @@
+Home As screen:
+
+    Toolbar_1 As Toolbar:
+        Fill: =Coalesce(Toolbar_1.Properties.Controls.Gallery.Colours.Background, Toolbar_1.Properties.Colours.Background)
+        Height: |
+            =80
+        Items: =colToolbarItems
+        Properties: =gvTheme
+        Y: =Parent.Height - Self.Height
+
+    Container5 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =gvTheme.Colours.Background
+        Height: =App.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width
+        ZIndex: =1
+
+        Feed_1 As Feed:
+            AlignInContainer: =AlignInContainer.Center
+            Feed: =colFeed
+            Fill: =gvTheme.Colours.Background
+            FillPortions: =1
+            LayoutMinWidth: =640
+            Properties: =gvTheme
+            Width: =Min(Parent.Width, Max(Parent.Width * 0.7,800))
+
+        Container2 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =64
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =1
+
+        Header_1 As Header:
+            Fill: =Coalesce(Header_1.Properties.Colours.Background,RGBA(0,0,0,0))
+            HeaderProperties: =gvHeaderProperties
+            Height: =80
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Properties: =gvTheme
+            Text: =If(Lower(Header_1.HeaderProperties.'Header Mode') <> "Title", txtHeaderInput.Text,"")
+            Width: =Parent.Width
+            ZIndex: =2
+

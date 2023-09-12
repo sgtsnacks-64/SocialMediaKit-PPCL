@@ -5,7 +5,7 @@
 
 Urgh! Another Theming methodology in Canvas Apps!
 
-This guide sets out to be a compehensive guide on how the theming of the components held in "The Social Media Kit" works, to arm you with all the methods available to get the most out of this component library.
+This guide sets out to be a compehensive runthrough on how the theming of the components held in "The Social Media Kit" works, to arm you with all the methods available to get the most out of this component library.
 
 ## The Principle
 

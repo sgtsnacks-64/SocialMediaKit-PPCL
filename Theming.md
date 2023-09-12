@@ -254,27 +254,4 @@ You can set the "Properties" value of each component to the variable defined, an
 Component.Properties = gvTheme
 ```
 
-You can define overrides in the global variable, and each component that utilises the global variable will adhere to any overrides specified.
 
-## Overriding the theme in a component with a global theme set
-
-However, you may wish to set an override on a specific component, but still use the theming variable already configured. This can be achieved by using the *Patch()* function within the Properties setting on the component, as *Patch()* will combine two records together, overriding the left hand side of the function with values on the right hand side, and output the modified record.
-
-```javascript
-Component.Properties = 
-    Patch(
-        gvThemeRecord,                  //Our base theme
-        {                       
-        Controls:
-            {
-            Label:
-            {
-                Colours:
-                {
-                    Text: Color.Red     //This is the record that will be injected into the gvThemeRecord variable for the purposes of this specific component.
-                }
-            }
-        }
-    })
-
-```

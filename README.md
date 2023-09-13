@@ -1,5 +1,5 @@
-# SocialMediaKit-PPCL
-## Component Library for "The Social Media Kit"
+# The Social Media Kit
+## A Component Library inspired by Social Media Services 👍
 
 <img src="./assets/Social Media Kit - Gif.gif" />
 

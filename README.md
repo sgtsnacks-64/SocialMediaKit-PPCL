@@ -45,6 +45,7 @@ All components follow a consistent theming approach which is easy to configure a
 
 This repo provides the following files:
 
-+ /unmanaged/ComponentLibraryTheSocialMediaKit.zip
-  + The Unmanaged Solution ready to load into your environment
++ <a href="ComponentLibraryTheSocialMediaCollection.zip">/unmanaged/ComponentLibraryTheSocialMediaKit.zip</a>
+  + The Unmanaged Solution ready to load into your environment - Download this zip to install in your environment.
 + /unmanaged
+  + The unpacked Unmanaged Solution 

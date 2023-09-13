@@ -49,3 +49,7 @@ This repo provides the following files:
   + The Unmanaged Solution ready to load into your environment - Download this zip to install in your environment.
 + /unmanaged
   + The unpacked Unmanaged Solution 
+
+Follow this <a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-update-export-solutions">Microsoft Learn Article</a> on how to install the Solution Zip file into your own Power Platform Environment.
+
+Ensure the Component Library is shared with any makers in your environment so they can utilise the components.

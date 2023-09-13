@@ -42,3 +42,9 @@ A configurable Infinity Form that allows for Text, DropDown and Toggle based inp
 All components follow a consistent theming approach which is easy to configure and usable by other controls in your apps. Makers can even utilise the upcoming Modern Theming Control. More information on theming can be found <a href="./Theming.md">here</a>
 
 # Installation
+
+This repo provides the following files:
+
++ /unmanaged/ComponentLibraryTheSocialMediaKit.zip
+  + The Unmanaged Solution ready to load into your environment
++ /unmanaged

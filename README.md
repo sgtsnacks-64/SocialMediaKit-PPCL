@@ -42,3 +42,14 @@ A configurable Infinity Form that allows for Text, DropDown and Toggle based inp
 All components follow a consistent theming approach which is easy to configure and usable by other controls in your apps. Makers can even utilise the upcoming Modern Theming Control. More information on theming can be found <a href="./Theming.md">here</a>
 
 # Installation
+
+This repo provides the following files:
+
++ <a href="ComponentLibraryTheSocialMediaCollection.zip">/unmanaged/ComponentLibraryTheSocialMediaKit.zip</a>
+  + The Unmanaged Solution ready to load into your environment - Download this zip to install in your environment.
++ /unmanaged
+  + The unpacked Unmanaged Solution 
+
+Follow this <a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-update-export-solutions">Microsoft Learn Article</a> on how to install the Solution Zip file into your own Power Platform Environment.
+
+Ensure the Component Library is shared with any makers in your environment so they can utilise the components.

@@ -53,3 +53,11 @@ This repo provides the following files:
 Follow this <a href="https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-update-export-solutions">Microsoft Learn Article</a> on how to install the Solution Zip file into your own Power Platform Environment.
 
 Ensure the Component Library is shared with any makers in your environment so they can utilise the components.
+
+
+flowchart LR
+
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]

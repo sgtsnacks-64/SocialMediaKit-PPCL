@@ -65,7 +65,8 @@ Settings As CanvasComponent:
                                 "Text",
                                     ThisRecord.txtInput.Text,
                                 "Selection",
-                                    ThisRecord.dd_Input.Selected.Value)
+                                    ThisRecord.dd_Input.Selected.Value),
+                'Default Value': ThisRecord.'Default Value'
             })
     Properties: |-
         ={
@@ -275,6 +276,70 @@ Settings As CanvasComponent:
                 }
             }
         }
+    ReadMe: |-
+        =/*
+        
+        ****Header Component****
+        ****Settings****
+        
+        Controls that can be overidden:
+        
+        + Label
+        + DropDown
+        + Toggle
+        + TextInput
+        + Icon
+        
+        ====Inputs====
+        
+            Properties (Record):
+                A record property containing configurable properties like colours, typography etc.
+                More information on how theming works can be found here: https://github.com/sgtsnacks-64/SocialMediaKit-PPCL/blob/main/Theming.md
+        
+            Items (Table): 
+                Table of items to be displayed in the form:
+                **The Sample below can be copied and reused in this component**
+                    Table(
+                        {
+                            'Field Name': "Setting3",               //The Field Name to be displayed                        
+                            Category: "Misc",                       //The Category for this field, If categorisation is enabled, will be used to categorise
+                            Context: "Lorem ipsum",                 //The context text of this field, displayed below the Field Name
+                            'Input Type': "Selection",              //The Input Type, can be "Text", "Toggle" or "Selection"
+                            'Default Value': "True",                //The Default Value, as text. Will be interpreted by each input type, for example, "true" will be true for Toggle
+                            'Display Mode': DisplayMode.Edit,       //The DisplayMode for this field, can be DisplayMode.Edit, DisplayMode.View or DisplayMode.Disabled
+                            Items: ["Hello", "World"]               //For Selection Input, a list of items for selection, must be a flat table of String with a "Value" key
+                        })
+        
+            Settings Properties (Record):
+                A list of settings to configure on this component:
+                **The Sample below can be copied and reused in this component**
+                    {
+                        'Break Down by Categories': true            //Denotes if items are to be categorised. Categorisation is based on field order and is not sorted alphabetically.
+                    }
+        
+            ReadMe:
+                The Contents of this ReadMe
+        
+            Use Modern Theming (Boolean):
+                Define if Modern Theming will be used (true), or the theming as defined in the Properties record (false)
+        
+        ====Outputs====
+        
+            Output (Table):
+                A table of output field names and values:
+                ***Example***
+                    Table(
+                        {
+                            'Field Name': "This Field",             //String: The Field Name based on Input Table
+                            'New Value': "true",                    //String: The New Value from the field
+                            'Default Value': "false"                //String: The Default Value, useful for comparison
+                        })
+                Outputs can be looked up:
+                    LookUp(Component.Output, 'Field Name' = "This Field").'New Value'
+                
+                Or indexed:
+                    Index(Component.Output, 2).'New Value'
+        */
     SettingsProperties: |-
         ={
             'Break Down by Categories': true
@@ -357,7 +422,7 @@ Settings As CanvasComponent:
             ZIndex: =1
 
         tglInput As toggleSwitch:
-            Default: =Boolean(ThisItem.'Default Value')
+            Default: =IfError(Boolean(ThisItem.'Default Value'),false)
             DisplayMode: =ThisItem.'Display Mode'
             FalseFill: =If(Settings.UseModernTheming, App.Theme.Colors.Lighter70,Coalesce(Settings.Properties.Controls.Toggle.Colours.Secondary,Settings.Properties.Colours.Secondary))
             Font: =Settings.Properties.Style.Font.'Font-Family'
@@ -396,7 +461,7 @@ Settings As CanvasComponent:
             BorderColor: =If(Settings.UseModernTheming, App.Theme.Colors.Primary, Coalesce(Settings.Properties.Controls.TextInput.Colours.Border, Settings.Properties.Colours.Border))
             BorderThickness: =Coalesce(Settings.Properties.Controls.TextInput.Style.Borders.Thickness,Settings.Properties.Style.Borders.Thickness)
             Color: =If(Settings.UseModernTheming, Color.Black, Coalesce(Settings.Properties.Controls.Dropdown.Colours.Text,Settings.Properties.Colours.Text))
-            Default: =ThisItem.'Default Value'
+            Default: =IfError(ThisItem.'Default Value',Blank())
             Fill: =If(Settings.UseModernTheming, RGBA(0,0,0,0), Coalesce(Settings.Properties.Controls.TextInput.Colours.Background,Settings.Properties.Colours.Background))
             Font: =Settings.Properties.Style.Font.'Font-Family'
             HintText: =""
@@ -421,6 +486,7 @@ Settings As CanvasComponent:
             ChevronFill: =If(Settings.UseModernTheming, Color.White, Coalesce(Settings.Properties.Controls.Dropdown.Colours.Secondary,Settings.Properties.Colours.Secondary))
             ChevronHoverBackground: =ColorFade(Self.ChevronBackground, -20%)
             Color: =If(Settings.UseModernTheming, Color.Black, Coalesce(Settings.Properties.Controls.Dropdown.Colours.Text,Settings.Properties.Colours.Text))
+            Default: =IfError(ThisItem.'Default Value', Blank())
             Fill: =If(Settings.UseModernTheming, RGBA(0,0,0,0),Coalesce(Settings.Properties.Controls.Dropdown.Colours.Background,Settings.Properties.Colours.Background))
             Font: =Settings.Properties.Style.Font.'Font-Family'
             Height: =txtInput.Height

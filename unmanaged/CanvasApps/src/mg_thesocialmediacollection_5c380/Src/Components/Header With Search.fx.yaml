@@ -246,6 +246,7 @@
         
             Properties (Record):
                 A record property containing configurable properties like colours, typography etc.
+                More information on how theming works can be found here: https://github.com/sgtsnacks-64/SocialMediaKit-PPCL/blob/main/Theming.md
         
             Header Properties (Record): 
                 Set properties specific to this header component:

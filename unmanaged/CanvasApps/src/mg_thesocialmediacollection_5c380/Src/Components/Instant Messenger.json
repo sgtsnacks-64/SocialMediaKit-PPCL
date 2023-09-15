@@ -1,10 +1,13 @@
 {
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
+  "ComponentExtraMetadata": {
+    "ComponentDescription": "This is a messaing feed component that displays incoming and outgoing messages"
+  },
   "ComponentManifest": {
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
-    "Description": "",
+    "Description": "This is a messaing feed component that displays incoming and outgoing messages",
     "Name": "Instant Messenger",
     "TemplateGuid": "558ba3c404274d439098957d139bd9e9"
   },
@@ -47,6 +50,15 @@
       "PropertyDataTypeKey": "String",
       "Tooltip": "ReadMe for this component",
       "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Output Transcript",
+      "Hidden": true,
+      "Name": "OutputTranscript",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "Output of the Transcript of this chat",
+      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"By\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"DateTime\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"MessageContent\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
     }
   ],
   "FirstParty": true,
@@ -57,7 +69,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638301186601178665",
+  "LastModifiedTimestamp": "638302904649518701",
   "Name": "558ba3c404274d439098957d139bd9e9",
   "OverridableProperties": {},
   "Version": "638285717231266608"

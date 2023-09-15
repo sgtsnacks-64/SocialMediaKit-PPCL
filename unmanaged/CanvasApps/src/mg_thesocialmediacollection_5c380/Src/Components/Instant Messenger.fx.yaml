@@ -1,6 +1,13 @@
 "'Instant Messenger' As CanvasComponent":
     Fill: =RGBA(0, 0, 0, 0)
     Height: =640
+    OutputTranscript: |-
+        =ForAll(Self.Transcript,
+        {
+            MessageContent: ThisRecord.MessageContent,
+            By: ThisRecord.User.Email,
+            DateTime: ThisRecord.DateTime
+        })
     Properties: |-
         ={
             /*
@@ -227,30 +234,22 @@
         
             Properties (Record):
                 A record property containing configurable properties like colours, typography etc.
+                More information on how theming works can be found here: https://github.com/sgtsnacks-64/SocialMediaKit-PPCL/blob/main/Theming.md
         
-            Toolbar Properties (Record): 
-                Set properties specific to this component:
+            Transcript (Table): 
+                Set Transcript used to display ongoing chat in this component:
                 **The Sample below can be copied and reused in this component**
-                    {
-                        'Indicator Location': "top",            //Define whether the indicator (Marker for selected item) resides at the top or bottom of the toolbar
-                        'Show Text': true,                      //Define if the Text is shown on the Toolbar Items
-                        'Show Icon': true,                      //Define if the Items are shown on the Toolbar Items
-                        'Indicator Width %': 50%                //The Width, in %, the indicator should cover the width of the toolbar item (Between 0 and 100)
-                    }
-            Items (Table):
-                The Toolbar Items to be displayed,
-                **The Sample below can be copied and reused in this component**
-                [
-                    {
-                        Title: "Home",                  // String: The text to be displayed in this items' Label
-                        Icon: Icon.Home,                // Icon[enum]: The built in Icon to be displayed in this item
-                        TargetScreen: App.ActiveScreen  // Control[Screen]: The target screen to navigate to
-                    },
-                    {
-                        Title: "My Network",
-                        Icon: Icon.People,
-                        TargetScreen: Blank()
-                    }]
+                    Table(
+                        {
+                            MessageContent: "Hello!",                       //String: Content of the Message
+                            User: {                                         //Record: User, mimicks the User() record in PowerApps. pass the user's details here (This may be the user sending or receiving message
+                                FullName: "Mike Gowland",                   //String: Full Name
+                                Email: "Mike.Gowland@example.com",          //String: User's Email Address
+                                Image: User().Image                         //Image: User's Image
+                            },
+                            DateTime: DateAdd(Now(),-5,TimeUnit.Minutes),   //DateTime: Date/Time value when Message was sent
+                            Type: "Sent"                                    //String: Type of message (i.e was the message sent or received)
+                        })
         
             Use Modern Theming (Boolean):
                 Define if Modern Theming will be used (true), or the theming as defined in the Properties record (false)
@@ -260,14 +259,15 @@
         
         ====Outputs====
         
-            Text:
-                Returns any text contained in the Text box control of this component
-        
-            LeftIconStatus:
-                Returns a Boolean (true/false) value based on whether the left icon/image has been selected. Default false
-        
-            RightIconStatus:
-                Returns a Boolean (true/false) value based on whether the right icon/image has been selected. Default false
+            Transcript Ouptut (Table):
+                A table of the Transcript
+                **Sample**
+                    Table(
+                        {
+                            MessageContent: ThisRecord.MessageContent,          //String: Message Content
+                            By: ThisRecord.User.Email,                          //String: Email address of the user who sent the message
+                            DateTime: ThisRecord.DateTime                       //DateTime: The Date/Time the message was sent
+                        })
         
         */
     Transcript: |

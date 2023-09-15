@@ -20,6 +20,7 @@
       "classiccontrols": false,
       "consistentreturnschemafortabularfunctions": true,
       "copyandmerge": false,
+      "dataflowanalysisenabled": false,
       "datatablev2control": true,
       "dataverseactionsenabled": true,
       "delaycontrolrendering": true,
@@ -46,7 +47,6 @@
       "enableruntimepolicies": true,
       "enablesaveloadcleardataonweb": false,
       "enableupdateifdelegation": false,
-      "enhanceddelegation": true,
       "enhancedgalleryinitialization": true,
       "errorhandling": true,
       "expandedsavedatasupport": true,
@@ -94,7 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 2,
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -128,8 +128,6 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Home",
-    "Settings Screen",
     "Settings Screen_1"
   ]
 }

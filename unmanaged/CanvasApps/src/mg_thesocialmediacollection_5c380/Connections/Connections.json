@@ -1,5 +1,6 @@
 {
   "43d6fb97-6cc3-4e70-a9e6-e368e166c62e": {
+    "appActions": [],
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Office 365 Users",

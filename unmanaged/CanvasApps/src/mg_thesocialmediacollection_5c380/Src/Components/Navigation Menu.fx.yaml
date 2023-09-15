@@ -230,6 +230,50 @@
                 }
             }
         }
+    ReadMe: |-
+        =/*
+        
+        ****Header Component****
+        ****Navigation Menu****
+        
+        Controls that can be overidden:
+        
+        + Label
+        
+        ====Inputs====
+        
+            Properties (Record):
+                A record property containing configurable properties like colours, typography etc.
+                More information on how theming works can be found here: https://github.com/sgtsnacks-64/SocialMediaKit-PPCL/blob/main/Theming.md
+        
+            Items (Table): 
+                Table of items to be displayed in the Menu:
+                **The Sample below can be copied and reused in this component**
+                    Table(
+                        {
+                            'Screen Name': "Setting3",               //The Name of the Screen to display to the user                       
+                            Category: "Misc",                       //The Category for this screen, If categorisation is enabled, will be used to categorise
+                            Context: "Lorem ipsum",                 //The context text of this screen, displayed below the Screen Name
+                            'Display Mode': DisplayMode.Edit,       //The DisplayMode for this field, can be DisplayMode.Edit, DisplayMode.View or DisplayMode.Disabled
+                            TargetScreen: 'Home'                   //The Screen to navigate to
+                        })
+        
+            Settings Properties (Record):
+                A list of settings to configure on this component:
+                **The Sample below can be copied and reused in this component**
+                    {
+                        'Break Down by Categories': true            //Denotes if items are to be categorised. Categorisation is based on field order and is not sorted alphabetically.
+                    }
+        
+            ReadMe:
+                The Contents of this ReadMe
+        
+            Use Modern Theming (Boolean):
+                Define if Modern Theming will be used (true), or the theming as defined in the Properties record (false)
+        
+        ====Outputs====
+        
+        */
     UseModernTheming: =false
     Width: =App.Width
     X: =0

@@ -232,50 +232,56 @@ Header As CanvasComponent:
         =/*
         
         ****Header Component****
+        ****The Social Media Kit****
         
-        Mike Gowland - 2023
+        Controls that can be overidden:
         
+        + Image
+        + TextInput
+        + Icon
         
-        --Purpose
+        ====Inputs====
         
-        Displays a neat header at the top of the application and uses the HeadingText property to display text on the header.
+            Properties (Record):
+                A record property containing configurable properties like colours, typography etc.
+                More information on how theming works can be found here: https://github.com/sgtsnacks-64/SocialMediaKit-PPCL/blob/main/Theming.md
         
-        --Inputs
+            Header Properties (Record): 
+                Set properties specific to this header component:
+                **The Sample below can be copied and reused in this component**
+                    {
+                        'Header Text': "",                      // String: This set's the default value, if desired in the Text box
+                        Image: User().Image,                    // Image: This value set's the image displayed on the left. 
+                        Icon: Icon.Message,                     // Icon (enum): Define a built in Icon to be displayed on the right
+                        IconImage: Blank(),                     // Image: Alternatively, an image can be used instead of an icon. If you don't wish to use an image, set this value as Blank() or omit from this property record
+                        'Right Icon':
+                        {
+                            Behavior: "Navigate",               // String: To navigate to Target Screen, set to "Navigate", else will toggle "RightIconStatus" property
+                            'Target Screen': App.ActiveScreen   // Control[Screen]: When Behaviour is set as "Navigate", defines the App screen to navigate to.
+                        },
+                        'Left Icon':
+                        {
+                            Behavior: "Toggle",                 // String: To navigate to Target Screen, set to "Navigate", else will toggle "LeftIconStatus" property
+                            'Target Screen': App.ActiveScreen   // Control[Screen]: When Behaviour is set as "Navigate", defines the App screen to navigate to.
+                        }
+                    }
         
-        Properties:
-            A record property containing configurable properties like colours, typography etc.
+            ReadMe:
+                The Contents of this ReadMe
         
-        HeadingText: 
-            Sets the header's text that's displayed.
+            Use Modern Theming (Boolean):
+                Define if Modern Theming will be used (true), or the theming as defined in the Properties record (false)
         
-        ReadMe:
-            This ReadMe
+        ====Outputs====
         
-        Functions:
+            Text:
+                Returns any text contained in the Text box control of this component
         
-        Interpolate String:
-            Interpolates a string using Replacement Tags and a Tag/Value table.
+            LeftIconStatus:
+                Returns a Boolean (true/false) value based on whether the left icon/image has been selected. Default false
         
-            Parameters: 
-                -Tags [Table]:
-                    A table of records containing replacement tags and values:
-                        Example:
-                            Table(
-                                {
-                                    Tag: "#Name#",
-                                    Value: User().FullName
-                                })
-                
-                -Text2Interpolate [Text]:
-                    A string of text containing replacement tags to interpolate with the Tags table
-                        Example:
-                            "Hello #Name#"
-        
-            Output:
-                [Text] - The Interpolated String
-                    Example:
-                        "Hello John Smith"
-        
+            RightIconStatus:
+                Returns a Boolean (true/false) value based on whether the right icon/image has been selected. Default false
         
         */
     RightIconSelected: =gvRightIconStatus

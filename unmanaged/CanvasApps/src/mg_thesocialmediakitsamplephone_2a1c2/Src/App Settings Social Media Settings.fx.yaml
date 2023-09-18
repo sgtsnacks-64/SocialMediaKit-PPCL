@@ -1,0 +1,137 @@
+"'App Settings Social Media Settings' As screen":
+    Fill: =gvTheme.Colours.Background
+    OnVisible: =Reset(Settings_3)
+
+    Toolbar_7 As Toolbar:
+        Fill: =Coalesce(Toolbar_7.Properties.Controls.Gallery.Colours.Background, Toolbar_7.Properties.Colours.Background)
+        Height: |
+            =80
+        Items: =colToolbarItems
+        Properties: =gvTheme
+        Y: =Parent.Height - Self.Height
+
+    Container5_6 As groupContainer.verticalAutoLayoutContainer:
+        Height: =App.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width
+        ZIndex: =1
+
+        Settings_3 As Settings:
+            FillPortions: =1
+            Items: |-
+                =Search(
+                    Sort([
+                    {
+                        'Field Name': "Change your Display Name",
+                        Category: "About You",
+                        Context: "Change the name people will see when searching for you, or viewing your posts",
+                        'Input Type': "Text",
+                        'Default Value': "Mike Crabs",
+                        'Display Mode': DisplayMode.Edit
+                    },
+                    {
+                        'Field Name': "Your Age",
+                        Category: "About You",
+                        Context: "Enter your Age, in years",
+                        'Input Type': "Text",
+                        'Default Value': "35",
+                        'Display Mode': DisplayMode.Edit
+                    },
+                    {
+                        'Field Name': "Default Share Level",
+                        Category: "Privacy",
+                        Context: "Control the default share level of your posts (you can change this for each post before publishing)",
+                        'Input Type': "Selection",
+                        'Default Value': "True",
+                        'Display Mode': DisplayMode.Edit,
+                        Items: ["Public", "Friends only", "Friends of Friends", "Private"]
+                    },
+                    {
+                        'Field Name': "Opt-in for Advertising",
+                        Category: "Privacy",
+                        Context: "Confirm you're happy for us to show you ads we think are relevant to your interests.",
+                        'Input Type': "Toggle",
+                        'Default Value': "True",
+                        'Display Mode': DisplayMode.Edit
+                    },
+                    {
+                        'Field Name': "Opt-in for Third Party Marketing",
+                        Category: "Privacy",
+                        Context: "Confirm you're happy for us to share your details with some of our third-party partners.",
+                        'Input Type': "Toggle",
+                        'Default Value': "True",
+                        'Display Mode': DisplayMode.Edit
+                    },
+                    {
+                        'Field Name': "Select Theme",
+                        Category: "Theme",
+                        Context: "Theme is applied through the entire app and changes the appearance of all elements",
+                        'Input Type': "Selection",
+                        'Default Value': "",
+                        Items: RenameColumns(colThemes, "Name", "Value"),
+                        'Display Mode': DisplayMode.Edit
+                    }],"Category", SortOrder.Ascending), Header_7.Text,"Category", "Field Name")
+            LayoutMinWidth: =640
+            Properties: =gvTheme
+            Width: =Parent.Width
+
+        Container2_7 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =64
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =1
+
+        Header_7 As Header:
+            Fill: =Coalesce(Header_7.Properties.Colours.Background,RGBA(0,0,0,0))
+            HeaderProperties: =gvHeaderProperties
+            Height: =80
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Properties: =gvTheme
+            Text: =If(Lower(Header_7.HeaderProperties.'Header Mode') <> "Title", txtHeaderInput.Text,"")
+            Width: =Parent.Width
+            ZIndex: =2
+
+        Container6_2 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: |
+                =64
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =25
+            PaddingRight: =25
+            PaddingTop: =10
+            ZIndex: =3
+
+            Button1_2 As button:
+                Color: =gvTheme.Colours.Background
+                Fill: =gvTheme.Colours.Primary
+                Font: =gvTheme.Style.Font.'Font-Family'
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(gvTheme, LookUp(colThemes, ThisRecord.Name = LookUp(Settings_3.Output, ThisRecord.'Field Name' = "Select Theme").'New Value').Theme);
+                    
+                    
+                    //Notify(If(Boolean(LookUp(Settings_1.Output, ThisRecord.'Field Name' = "Are you Human?").'New Value'),"You are human", "You are Robot"),NotificationType.Information)
+                RadiusBottomLeft: =gvTheme.Style.Borders.Radius.BottomLeft
+                RadiusBottomRight: =gvTheme.Style.Borders.Radius.BottomRight
+                RadiusTopLeft: =gvTheme.Style.Borders.Radius.TopLeft
+                RadiusTopRight: =gvTheme.Style.Borders.Radius.TopRight
+                Size: =gvTheme.Style.Font.Sizes.Text
+                Text: ="Save"
+                Width: =120
+                ZIndex: =1
+

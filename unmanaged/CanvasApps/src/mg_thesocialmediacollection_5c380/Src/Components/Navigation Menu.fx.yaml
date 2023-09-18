@@ -1,0 +1,386 @@
+"'Navigation Menu' As CanvasComponent":
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Items: |-
+        =[
+            {
+                'Screen Name': "Setting1",
+                Category: "Theme",
+                Context: "This is a setting",
+                'Display Mode': DisplayMode.Edit,
+                TargetScreen: App.ActiveScreen
+            },
+            {
+                'Screen Name': "Setting2.1",
+                Context: "This is a setting",
+                Category: "Accessibility",
+                'Display Mode': DisplayMode.Edit,
+                TargetScreen: App.ActiveScreen
+            }]
+    NavigationMenuProperties: |-
+        ={
+            'Break Down by Categories': true
+        }
+    OnReset: =
+    Properties: |-
+        ={
+            /*
+                    -----Default Style information, Will apply to all controls unless specified in the controls field below.
+            */
+            Colours: {
+                Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
+                Secondary: ColorValue("#555555"),       //Covers 
+                Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
+                Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
+                Text: Color.Black
+            },
+            Style: {
+                Borders: {
+                    Thickness: 1,
+                    FocusThickness: 1.0,
+                    Radius: {
+                        TopLeft: 0,
+                        TopRight: 0,
+                        BottomLeft: 0,
+                        BottomRight: 0
+                    }
+                },
+                Font: {
+                    'Font-Family': Font.'Open Sans',
+                    Sizes: {
+                        Heading: 28,
+                        Action: 16,
+                        Text: 17
+                    }
+                }
+            },
+            /*
+                    ----End of Default configuration
+            */
+            Controls: {
+                /*
+                        -----Overrides for individual control types in components. Options specified here will override the default options above.
+                */
+                Label: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Toggle: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222")
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Action: 16
+                            }
+                        }
+                    }
+                },
+                TextInput: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17    
+                            }
+                        }
+                    }
+                },
+                Image: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            Colour: ColorValue("#555555"),
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        }
+                    }
+                },
+                Bubble: {
+                    Colours: {Background: ColorValue("#ffffff"), Border: ColorValue("#222222"),Text: Color.Black},
+                    Style: {
+                        Borders: {
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            },
+                            Thickness: 0
+                        }
+                    }
+                },
+                Dropdown: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Gallery: {
+                    Colours: {
+                        Primary: ColorValue("#ffffff"),
+                        Secondary: ColorValue("#005d99"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        }
+                    }
+                }
+            }
+        }
+    ReadMe: |-
+        =/*
+        
+        ****Header Component****
+        ****Navigation Menu****
+        
+        Controls that can be overidden:
+        
+        + Label
+        
+        ====Inputs====
+        
+            Properties (Record):
+                A record property containing configurable properties like colours, typography etc.
+                More information on how theming works can be found here: https://github.com/sgtsnacks-64/SocialMediaKit-PPCL/blob/main/Theming.md
+        
+            Items (Table): 
+                Table of items to be displayed in the Menu:
+                **The Sample below can be copied and reused in this component**
+                    Table(
+                        {
+                            'Screen Name': "Setting3",               //The Name of the Screen to display to the user                       
+                            Category: "Misc",                       //The Category for this screen, If categorisation is enabled, will be used to categorise
+                            Context: "Lorem ipsum",                 //The context text of this screen, displayed below the Screen Name
+                            'Display Mode': DisplayMode.Edit,       //The DisplayMode for this field, can be DisplayMode.Edit, DisplayMode.View or DisplayMode.Disabled
+                            TargetScreen: 'Home'                   //The Screen to navigate to
+                        })
+        
+            Settings Properties (Record):
+                A list of settings to configure on this component:
+                **The Sample below can be copied and reused in this component**
+                    {
+                        'Break Down by Categories': true            //Denotes if items are to be categorised. Categorisation is based on field order and is not sorted alphabetically.
+                    }
+        
+            ReadMe:
+                The Contents of this ReadMe
+        
+            Use Modern Theming (Boolean):
+                Define if Modern Theming will be used (true), or the theming as defined in the Properties record (false)
+        
+        ====Outputs====
+        
+        */
+    UseModernTheming: =false
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    galNavFields As gallery.variableTemplateHeightGallery:
+        Default: =LookUp(Self.AllItems, ThisRecord.TargetScreen = App.ActiveScreen)
+        Height: =Parent.Height
+        Items: |-
+            =If(
+                'Navigation Menu'.NavigationMenuProperties.'Break Down by Categories',
+                Ungroup(
+                // 13:38:23 05/09/2023 | Mike.Gowland: Get Unique Categories
+                ForAll(
+                    Distinct(
+                        'Navigation Menu'.Items.Category,
+                        Category
+                    ) As UniqueCat,
+                    // 13:39:04 05/09/2023 | Mike.Gowland: For the x items based on Category
+                    ForAll(
+                        Sequence(
+                            CountRows(
+                                Filter(
+                                    'Navigation Menu'.Items,
+                                    Category = UniqueCat.Value
+                                )
+                            )
+                        ) As Counter,
+            
+                        // 13:40:03 05/09/2023 | Mike.Gowland: Patch ongoing Counter as ID field
+                        Patch(
+                            Index(
+                                Sort(
+                                    Filter('Navigation Menu'.Items, ThisRecord.Category = UniqueCat.Value),
+                                    Category
+                                ),
+                                Counter.Value
+                            ),
+                            {ID: Counter.Value}
+                        )
+                    )
+                ),
+                "Value"
+            ),
+            ForAll(Sequence(CountRows('Navigation Menu'.Items)),Patch(Index('Navigation Menu'.Items, ThisRecord.Value),{ID: ThisRecord.Value})))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(ThisItem.TargetScreen)
+        ShowScrollbar: =false
+        TemplateFill: =RGBA(0, 0, 0, ThisItem.IsSelected * 0.1)
+        TemplateSize: =100
+        Width: =Parent.Width
+        ZIndex: =3
+
+        lblNavScreenName As label:
+            AutoHeight: =true
+            Color: =If('Navigation Menu'.UseModernTheming, Color.Black, Coalesce('Navigation Menu'.Properties.Controls.Label.Colours.Text, 'Navigation Menu'.Properties.Colours.Text))
+            DisplayMode: =ThisItem.'Display Mode'
+            Font: ='Navigation Menu'.Properties.Style.Font.'Font-Family'
+            FontWeight: =FontWeight.Bold
+            Height: =35
+            OnSelect: =Select(Parent)
+            PaddingLeft: =15
+            Size: ='Navigation Menu'.Properties.Style.Font.Sizes.Text
+            Text: =ThisItem.'Screen Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Self.X
+            Y: =If(lblNavCategory.Visible, lblNavCategory.Height, 10)
+            ZIndex: =1
+
+        lblNavContext As label:
+            AutoHeight: =true
+            Color: =If('Navigation Menu'.UseModernTheming, Color.Black, Coalesce('Navigation Menu'.Properties.Controls.Label.Colours.Text, 'Navigation Menu'.Properties.Colours.Text))
+            DisplayMode: =ThisItem.'Display Mode'
+            Font: ='Navigation Menu'.Properties.Style.Font.'Font-Family'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Italic: =true
+            OnSelect: =Select(Parent)
+            PaddingLeft: =15
+            Size: ='Navigation Menu'.Properties.Style.Font.Sizes.Action
+            Text: =ThisItem.Context
+            Width: =Parent.Width - (Parent.TemplatePadding * 2) - 20
+            Y: =lblNavScreenName.Y + lblNavScreenName.Height
+            ZIndex: =3
+
+        recNavSeperator As rectangle:
+            Fill: =If('Navigation Menu'.UseModernTheming, App.Theme.Colors.Lighter60, ColorFade('Navigation Menu'.Properties.Colours.Secondary,60%))
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =lblNavContext.Y + lblNavContext.Height
+            ZIndex: =7
+
+        lblNavCategory As label:
+            AutoHeight: =true
+            Color: =If('Navigation Menu'.UseModernTheming, Color.Black, Coalesce('Navigation Menu'.Properties.Controls.Label.Colours.Text, 'Navigation Menu'.Properties.Colours.Text))
+            DisplayMode: =ThisItem.'Display Mode'
+            Font: ='Navigation Menu'.Properties.Style.Font.'Font-Family'
+            FontWeight: =FontWeight.Bold
+            Height: =150
+            OnSelect: =Select(Parent)
+            Size: ='Navigation Menu'.Properties.Style.Font.Sizes.Heading
+            Text: =ThisItem.Category
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =If('Navigation Menu'.NavigationMenuProperties.'Break Down by Categories', ThisItem.ID  = 1, false)
+            Width: =Parent.TemplateWidth
+            ZIndex: =8
+

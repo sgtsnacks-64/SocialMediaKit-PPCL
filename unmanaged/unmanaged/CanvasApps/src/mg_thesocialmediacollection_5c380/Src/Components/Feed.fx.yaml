@@ -1,0 +1,385 @@
+Feed As CanvasComponent:
+    Feed: |-
+        =[
+            {
+                User: User(),
+                Post: {
+                    Text: "This is my first post! 🤘 🦀",
+                    Image: [
+                        {
+                            ImageUrl: "https://cdn.pixabay.com/photo/2020/04/11/13/53/crab-5030504_1280.png",
+                            Image: SampleImage
+                        }
+                    ]
+                },
+                DateTime: DateAdd(
+                    Now(),
+                    -5,
+                    TimeUnit.Minutes
+                ),
+                TargetScreen: App.ActiveScreen
+            }
+        ]
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Properties: |-
+        ={
+            /*
+                    -----Default Style information, Will apply to all controls unless specified in the controls field below.
+            */
+            Colours: {
+                Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
+                Secondary: ColorValue("#555555"),       //Covers 
+                Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
+                Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
+                Text: Color.Black
+            },
+            Style: {
+                Borders: {
+                    Thickness: 1,
+                    FocusThickness: 1.0,
+                    Radius: {
+                        TopLeft: 0,
+                        TopRight: 0,
+                        BottomLeft: 0,
+                        BottomRight: 0
+                    }
+                },
+                Font: {
+                    'Font-Family': Font.'Open Sans',
+                    Sizes: {
+                        Heading: 28,
+                        Action: 16,
+                        Text: 17
+                    }
+                }
+            },
+            /*
+                    ----End of Default configuration
+            */
+            Controls: {
+                /*
+                        -----Overrides for individual control types in components. Options specified here will override the default options above.
+                */
+                Label: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Toggle: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222")
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Action: 16
+                            }
+                        }
+                    }
+                },
+                TextInput: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17    
+                            }
+                        }
+                    }
+                },
+                Image: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            Colour: ColorValue("#555555"),
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        }
+                    }
+                },
+                Bubble: {
+                    Colours: {Background: ColorValue("#ffffff"), Border: ColorValue("#222222"),Text: Color.Black},
+                    Style: {
+                        Borders: {
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            },
+                            Thickness: 0
+                        }
+                    }
+                },
+                Dropdown: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Gallery: {
+                    Colours: {
+                        Primary: ColorValue("#ffffff"),
+                        Secondary: ColorValue("#005d99"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        }
+                    }
+                }
+            }
+        }
+    ReadMe: |-
+        =/*
+        
+        ****Feed Component****
+        ****The Social Media Kit****
+        
+        Controls that can be overidden:
+        
+        + Gallery
+        + Label
+        + Image -- Only applies to User's Profile Image in Feed
+        + Label
+        
+        ====Inputs====
+        
+            Properties (Record):
+                A record property containing configurable properties like colours, typography etc.
+                More information on how theming works can be found here: https://github.com/sgtsnacks-64/SocialMediaKit-PPCL/blob/main/Theming.md
+        
+            Feed (Table): 
+                A table of the feed to show in the component:
+                **The Sample below can be copied and reused in this component**
+                    Table(
+                        {
+                            User: User(),                                       //String: The user record, mimicks the User() record from PowerApps, can be manually overridden
+                            Post: {                                             //Record: Record containing the post details
+                                Text: "This is my first post! 🤘 🦀",           //Text: Text portion of the post
+                                Image: [                                        //Table: Collection of Images from the post
+                                    {
+                                        ImageUrl: "https://domain.com/image",   //String: Image URL, will override "Image"
+                                        Image: SampleImage                      //Image: Post Image.
+                                    }
+                                ]
+                            },
+                            DateTime: DateAdd(                                  //DateTime: Date Time of the post
+                                Now(),
+                                -5,
+                                TimeUnit.Minutes
+                            ),
+                            TargetScreen: App.ActiveScreen                      //Control.Screen: If the post is selected, navigate to this screen.
+                        })
+        
+            Use Modern Theming (Boolean):
+                Define if Modern Theming will be used (true), or the theming as defined in the Properties record (false)
+                    
+            ReadMe:
+                The Contents of this ReadMe
+        
+        ====Outputs====
+        
+            Transcript Ouptut (Table):
+                A table of the Transcript
+                **Sample**
+                    Table(
+                        {
+                            MessageContent: ThisRecord.MessageContent,          //String: Message Content
+                            By: ThisRecord.User.Email,                          //String: Email address of the user who sent the message
+                            DateTime: ThisRecord.DateTime                       //DateTime: The Date/Time the message was sent
+                        })
+        
+        */
+    UseModernTheming: =true
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "Gallery1 As gallery.'BrowseLayout_Flexible_SocialFeed_ver5.0'":
+        DelayItemLoading: =true
+        Height: =Parent.Height
+        Items: =Feed.Feed
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(ThisItem.TargetScreen)
+        TemplateFill: =Feed.Properties.Colours.Background
+        TemplatePadding: =0
+        TemplateSize: =Min(870, Self.Height - 60) + 40
+        Width: =Parent.Width
+        ZIndex: =1
+
+        ProfileImage1 As image:
+            Height: =64
+            Image: =ThisItem.User.Image
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =Coalesce(Feed.Properties.Controls.Image.Style.Borders.Radius.BottomLeft, Feed.Properties.Style.Borders.Radius.BottomLeft)
+            RadiusBottomRight: =Coalesce(Feed.Properties.Controls.Image.Style.Borders.Radius.BottomRight, Feed.Properties.Style.Borders.Radius.BottomRight)
+            RadiusTopLeft: =Coalesce(Feed.Properties.Controls.Image.Style.Borders.Radius.TopLeft, Feed.Properties.Style.Borders.Radius.TopLeft)
+            RadiusTopRight: =Coalesce(Feed.Properties.Controls.Image.Style.Borders.Radius.TopRight, Feed.Properties.Style.Borders.Radius.TopRight)
+            Width: =64
+            X: =20
+            Y: =16
+            ZIndex: =1
+
+        Title1 As label:
+            Color: = Coalesce(Feed.Properties.Controls.Label.Colours.Text, Feed.Properties.Colours.Text)
+            Font: =Feed.Properties.Style.Font.'Font-Family'
+            FontWeight: =FontWeight.Semibold
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =Feed.Properties.Style.Font.Sizes.Text
+            Text: =$"{ThisItem.User.FullName} - {ThisItem.DateTime}"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Self.X - 20
+            X: =96
+            Y: =ProfileImage1.Y + (ProfileImage1.Height / 2) - (Self.Height / 2)
+            ZIndex: =2
+
+        Image2 As image:
+            Height: =Min(Self.Width, Parent.TemplateHeight - 180)
+            Image: =Coalesce(First(ThisItem.Post.Image).ImageUrl,First(ThisItem.Post.Image).Image)
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =!IsBlank(Self.Image)
+            Width: =Parent.TemplateWidth - Self.X - 20
+            X: =20
+            Y: =96
+            ZIndex: =3
+
+        Body1 As label:
+            AutoHeight: =true
+            Color: =Coalesce(Feed.Properties.Controls.Label.Colours.Primary, Feed.Properties.Colours.Secondary)
+            Font: =Feed.Properties.Style.Font.'Font-Family'
+            FontWeight: =FontWeight.Semibold
+            Height: =Self.Size * 4
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =Feed.Properties.Style.Font.Sizes.Text
+            Text: =ThisItem.Post.Text
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Self.X - 20
+            X: =20
+            Y: =Image2.Y + If(Image2.Visible,Image2.Height,0) + 16
+            ZIndex: =4
+
+        recSpacer As rectangle:
+            Fill: =RGBA(56, 96, 178, 0)
+            Height: =25
+            X: =40
+            Y: =Body1.Height + Body1.Y
+            ZIndex: =5
+

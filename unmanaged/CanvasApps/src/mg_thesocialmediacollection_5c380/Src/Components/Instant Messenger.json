@@ -1,0 +1,76 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentExtraMetadata": {
+    "ComponentDescription": "This is a messaing feed component that displays incoming and outgoing messages"
+  },
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "This is a messaing feed component that displays incoming and outgoing messages",
+    "Name": "Instant Messenger",
+    "TemplateGuid": "558ba3c404274d439098957d139bd9e9"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Properties",
+      "Hidden": false,
+      "Name": "Properties",
+      "PropertyDataTypeKey": "Record",
+      "Tooltip": "Properties Record",
+      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Colours\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Background\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Border\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Primary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Secondary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Text\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Controls\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Bubble\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Colours\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Background\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Border\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Text\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Style\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Borders\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Radius\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"BottomLeft\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"BottomRight\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TopLeft\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TopRight\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Thickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}]}]},{\"Name\":\"Dropdown\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Colours\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Background\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Border\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Primary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Secondary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Text\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Style\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Borders\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"FocusThickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Thickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Font\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Font-Family\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Sizes\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Action\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Heading\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Text\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}]}]}]},{\"Name\":\"Gallery\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Colours\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Background\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Primary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Secondary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Style\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Borders\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"FocusThickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Thickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}]}]},{\"Name\":\"Image\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Colours\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Background\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Border\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Primary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Secondary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Style\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Borders\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Colour\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"FocusThickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Radius\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"BottomLeft\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"BottomRight\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TopLeft\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TopRight\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Thickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}]}]},{\"Name\":\"Label\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Colours\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Background\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Border\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Primary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Secondary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Text\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Style\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Borders\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"FocusThickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Thickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Font\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Font-Family\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Sizes\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Action\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Heading\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Text\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}]}]}]},{\"Name\":\"TextInput\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Colours\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Background\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Border\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Primary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Secondary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Text\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Style\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Borders\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"FocusThickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Radius\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"BottomLeft\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"BottomRight\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TopLeft\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TopRight\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Thickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Font\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Font-Family\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Sizes\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Action\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Heading\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Text\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}]}]}]},{\"Name\":\"Toggle\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Colours\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Border\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Primary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Secondary\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Style\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Borders\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"FocusThickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Thickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Font\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Font-Family\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Sizes\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Action\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}]}]}]}]},{\"Name\":\"Style\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Borders\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"FocusThickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Radius\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"BottomLeft\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"BottomRight\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TopLeft\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"TopRight\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Thickness\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]},{\"Name\":\"Font\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Font-Family\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Sizes\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Action\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Heading\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Text\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}]}]}]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Transcript",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Transcript",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "Transcript Data for Chat",
+      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"DateTime\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"EditStatus\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"MessageContent\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Type\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"User\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Email\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"FullName\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Image\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Use Modern Theming",
+      "Hidden": false,
+      "Name": "UseModernTheming",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Toggle between Modern Theming Colours and Defined Colour Scheme in Properties",
+      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ReadMe",
+      "Hidden": false,
+      "Name": "ReadMe",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "ReadMe for this component",
+      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Output Transcript",
+      "Hidden": true,
+      "Name": "OutputTranscript",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "Output of the Transcript of this chat",
+      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"By\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"DateTime\",\"Kind\":\"DateTime\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"MessageContent\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638306260918517219",
+  "Name": "558ba3c404274d439098957d139bd9e9",
+  "OverridableProperties": {},
+  "Version": "638285717231266608"
+}

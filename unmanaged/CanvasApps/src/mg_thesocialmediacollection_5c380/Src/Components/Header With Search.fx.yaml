@@ -1,0 +1,401 @@
+"'Header With Search' As CanvasComponent":
+    Fill: =Coalesce('Header With Search'.Properties.Colours.Background,RGBA(0,0,0,0))
+    HeaderProperties: |-
+        ={
+            HintText: "🔍 Search",      //In TextBox mode, this will display as the Hint Text in the Textbox Control
+            'Header Text': "",          //In title mode, this will be displayed in the Textbox
+            Image: User().Image,        
+            Icon: Icon.Message,         //Define a built in Icon here
+            IconImage: Blank(),//SampleImage,     //To use built in icon, set this property as Blank()
+            'Header Mode': "TextBox",   //Can also set as "Title" to remove Text Box and display Header Text
+            'Right Icon':
+            {
+                Behavior: "Navigate",    //To navigate to Target Screen, set to "Navigate", else will toggle "RightIconStatus" property
+                'Target Screen': App.ActiveScreen
+            },
+            'Left Icon':
+            {
+                Behavior: "Toggle",    //To navigate to Target Screen, set to "Navigate", else will toggle "LeftIconStatus" property
+                'Target Screen': App.ActiveScreen
+            }
+        }
+    Height: =64
+    LeftIconStatus: =gvLeftIconStatus
+    OnReset: =
+    Properties: |-
+        ={
+            /*
+                    -----Default Style information, Will apply to all controls unless specified in the controls field below.
+            */
+            Colours: {
+                Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
+                Secondary: ColorValue("#555555"),       //Covers 
+                Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
+                Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
+                Text: Color.Black
+            },
+            Style: {
+                Borders: {
+                    Thickness: 1,
+                    FocusThickness: 1.0,
+                    Radius: {
+                        TopLeft: 0,
+                        TopRight: 0,
+                        BottomLeft: 0,
+                        BottomRight: 0
+                    }
+                },
+                Font: {
+                    'Font-Family': Font.'Open Sans',
+                    Sizes: {
+                        Heading: 28,
+                        Action: 16,
+                        Text: 17
+                    }
+                }
+            },
+            /*
+                    ----End of Default configuration
+            */
+            Controls: {
+                /*
+                        -----Overrides for individual control types in components. Options specified here will override the default options above.
+                */
+                Label: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Toggle: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222")
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Action: 16
+                            }
+                        }
+                    }
+                },
+                TextInput: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17    
+                            }
+                        }
+                    }
+                },
+                Image: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            0,
+                            0,
+                            0,
+                            0
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            Colour: ColorValue("#555555"),
+                            FocusThickness: 1.0,
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            }
+                        }
+                    }
+                },
+                Bubble: {
+                    Colours: {Background: ColorValue("#ffffff"), Border: ColorValue("#222222"),Text: Color.Black},
+                    Style: {
+                        Borders: {
+                            Radius: {
+                                TopLeft: 0,
+                                TopRight: 0,
+                                BottomLeft: 0,
+                                BottomRight: 0
+                            },
+                            Thickness: 0
+                        }
+                    }
+                },
+                Dropdown: {
+                    Colours: {
+                        Primary: ColorValue("#005d99"),
+                        Secondary: ColorValue("#555555"),
+                        Border: ColorValue("#222222"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        ),
+                        Text: Color.Black
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0.5,
+                            FocusThickness: 1.0
+                        },
+                        Font: {
+                            'Font-Family': Font.'Open Sans',
+                            Sizes: {
+                                Heading: 28,
+                                Action: 16,
+                                Text: 17
+                            }
+                        }
+                    }
+                },
+                Gallery: {
+                    Colours: {
+                        Primary: ColorValue("#ffffff"),
+                        Secondary: ColorValue("#005d99"),
+                        Background: RGBA(
+                            255,
+                            255,
+                            255,
+                            1
+                        )
+                    },
+                    Style: {
+                        Borders: {
+                            Thickness: 0,
+                            FocusThickness: 1.0
+                        }
+                    }
+                }
+            }
+        }
+    ReadMe: |-
+        =/*
+        
+        ****Header Component****
+        ****The Social Media Kit****
+        
+        Controls that can be overidden:
+        
+        + Image
+        + TextInput
+        + Icon
+        
+        ====Inputs====
+        
+            Properties (Record):
+                A record property containing configurable properties like colours, typography etc.
+                More information on how theming works can be found here: https://github.com/sgtsnacks-64/SocialMediaKit-PPCL/blob/main/Theming.md
+        
+            Header Properties (Record): 
+                Set properties specific to this header component:
+                **The Sample below can be copied and reused in this component**
+                    {
+                        HintText: "🔍 Search",                  // String: This will display as the Hint Text in the Textbox Control
+                        'Header Text': "",                      // String: This set's the default value, if desired in the Text box
+                        Image: User().Image,                    // Image: This value set's the image displayed on the left. 
+                        Icon: Icon.Message,                     // Icon (enum): Define a built in Icon to be displayed on the right
+                        IconImage: Blank(),                     // Image: Alternatively, an image can be used instead of an icon. If you don't wish to use an image, set this value as Blank() or omit from this property record
+                        'Right Icon':
+                        {
+                            Behavior: "Navigate",               // String: To navigate to Target Screen, set to "Navigate", else will toggle "RightIconStatus" property
+                            'Target Screen': App.ActiveScreen   // Control[Screen]: When Behaviour is set as "Navigate", defines the App screen to navigate to.
+                        },
+                        'Left Icon':
+                        {
+                            Behavior: "Toggle",                 // String: To navigate to Target Screen, set to "Navigate", else will toggle "LeftIconStatus" property
+                            'Target Screen': App.ActiveScreen   // Control[Screen]: When Behaviour is set as "Navigate", defines the App screen to navigate to.
+                        }
+                    }
+        
+            ReadMe:
+                The Contents of this ReadMe
+        
+            Use Modern Theming (Boolean):
+                Define if Modern Theming will be used (true), or the theming as defined in the Properties record (false)
+        
+        ====Outputs====
+        
+            Text:
+                Returns any text contained in the Text box control of this component
+        
+            LeftIconStatus:
+                Returns a Boolean (true/false) value based on whether the left icon/image has been selected. Default false
+        
+            RightIconStatus:
+                Returns a Boolean (true/false) value based on whether the right icon/image has been selected. Default false
+        
+        */
+    RightIconStatus: =gvRightIconStatus
+    Text: =If(Lower('Header With Search'.HeaderProperties.'Header Mode') <> "Title", txtHeaderInput.Text,"")
+    UseModernTheming: =false
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    cntHeaderBody As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =10
+        PaddingLeft: =25
+        PaddingRight: =25
+        PaddingTop: =10
+        Width: =Parent.Width
+        ZIndex: =1
+
+        imgLeftHeaderImage As image:
+            BorderColor: =If('Header With Search'.UseModernTheming,App.Theme.Colors.Primary, Coalesce('Header With Search'.Properties.Controls.Image.Colours.Border,'Header With Search'.Properties.Colours.Border))
+            BorderThickness: =Coalesce('Header With Search'.Properties.Controls.Image.Style.Borders.Thickness, 'Header With Search'.Properties.Style.Borders.Thickness)
+            Fill: =Coalesce('Header With Search'.Properties.Controls.Image.Colours.Background, 'Header With Search'.Properties.Colours.Background)
+            Height: =Parent.Height - Parent.PaddingTop * 2
+            Image: ='Header With Search'.HeaderProperties.Image
+            LayoutMinHeight: =320
+            LayoutMinWidth: =320
+            OnSelect: |-
+                =If(Lower('Header With Search'.HeaderProperties.'Left Icon'.Behavior) <> "navigate",
+                    Set(gvLeftIconStatus, !Coalesce(gvLeftIconStatus, false)),
+                    Navigate('Header With Search'.HeaderProperties.'Left Icon'.'Target Screen'))
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Width: =Self.Height
+            ZIndex: =1
+
+        txtHeaderInput As text:
+            BorderColor: =If('Header With Search'.UseModernTheming, App.Theme.Colors.Primary,Coalesce('Header With Search'.Properties.Controls.TextInput.Colours.Border, 'Header With Search'.Properties.Colours.Border))
+            BorderThickness: |-
+                =Coalesce(
+                    'Header With Search'.Properties.Controls.TextInput.Style.Borders.Thickness,
+                    'Header With Search'.Properties.Style.Borders.Thickness
+                )
+            Color: =If('Header With Search'.UseModernTheming, Color.Black,Coalesce('Header With Search'.Properties.Controls.TextInput.Colours.Text, 'Header With Search'.Properties.Colours.Text))
+            Default: =If('Header With Search'.HeaderProperties.'Header Mode' = "Title", Coalesce('Header With Search'.HeaderProperties.'Header Text',""))
+            DisplayMode: =If('Header With Search'.HeaderProperties.'Header Mode' = "Title", DisplayMode.View, DisplayMode.Edit)
+            Fill: =If('Header With Search'.HeaderProperties.'Header Mode' <> "Title",If('Header With Search'.UseModernTheming,RGBA(0,0,0,0), Coalesce('Header With Search'.Properties.Controls.TextInput.Colours.Background,'Header With Search'.Properties.Colours.Background)))
+            Font: ='Header With Search'.Properties.Style.Font.'Font-Family'
+            Height: =imgLeftHeaderImage.Height
+            HintText: ='Header With Search'.HeaderProperties.HintText
+            HoverBorderColor: =ColorFade(Self.BorderColor,30%)
+            HoverFill: =ColorFade(Self.BorderColor,90%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: |-
+                =Min(
+                    Max(
+                        Parent.Width - Self.X - icoRightHeaderIcon.Width - Parent.PaddingLeft * 2,
+                        128
+                    ),
+                    512
+                )
+            OnChange: =
+            RadiusBottomLeft: =Coalesce('Header With Search'.Properties.Controls.TextInput.Style.Borders.Radius.BottomLeft, 'Header With Search'.Properties.Style.Borders.Radius.BottomLeft)
+            RadiusBottomRight: =Coalesce('Header With Search'.Properties.Controls.TextInput.Style.Borders.Radius.BottomRight, 'Header With Search'.Properties.Style.Borders.Radius.BottomRight)
+            RadiusTopLeft: =Coalesce('Header With Search'.Properties.Controls.TextInput.Style.Borders.Radius.TopLeft, 'Header With Search'.Properties.Style.Borders.Radius.TopLeft)
+            RadiusTopRight: =Coalesce('Header With Search'.Properties.Controls.TextInput.Style.Borders.Radius.TopRight, 'Header With Search'.Properties.Style.Borders.Radius.TopRight)
+            Size: ='Header With Search'.Properties.Style.Font.Sizes.Text
+            Visible: ='Header With Search'.HeaderProperties.'Header Mode' <> "None"
+            Width: =Min(450,Parent.Width * 0.66)
+            ZIndex: =2
+
+        icoRightHeaderIcon As icon.Message:
+            Color: =If('Header With Search'.UseModernTheming, App.Theme.Colors.Primary,'Header With Search'.Properties.Colours.Primary)
+            Height: =imgLeftHeaderImage.Height
+            Icon: ='Header With Search'.HeaderProperties.Icon
+            OnSelect: =Select(imgRightHeaderImage)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =IsBlank(imgRightHeaderImage.Image)
+            Width: =Self.Height
+            ZIndex: =3
+
+        imgRightHeaderImage As image:
+            BorderColor: =If('Header With Search'.UseModernTheming, App.Theme.Colors.Primary,Coalesce('Header With Search'.Properties.Controls.Image.Colours.Border, 'Header With Search'.Properties.Colours.Border))
+            BorderThickness: =Coalesce('Header With Search'.Properties.Controls.Image.Style.Borders.Thickness, 'Header With Search'.Properties.Style.Borders.Thickness)
+            Height: =icoRightHeaderIcon.Height
+            Image: ='Header With Search'.HeaderProperties.IconImage
+            LayoutMinHeight: =320
+            LayoutMinWidth: =320
+            OnSelect: |-
+                =If(Lower('Header With Search'.HeaderProperties.'Right Icon'.Behavior) <> "navigate",
+                    Set(gvRightIconStatus, !Coalesce(gvRightIconStatus, false)),
+                    Navigate('Header With Search'.HeaderProperties.'Right Icon'.'Target Screen'))
+            RadiusBottomLeft: |
+                =Coalesce('Header With Search'.Properties.Controls.Image.Style.Borders.Radius.BottomLeft, 'Header With Search'.Properties.Style.Borders.Radius.BottomLeft)
+            RadiusBottomRight: |
+                =Coalesce('Header With Search'.Properties.Controls.Image.Style.Borders.Radius.BottomRight, 'Header With Search'.Properties.Style.Borders.Radius.BottomRight)
+            RadiusTopLeft: |
+                =Coalesce('Header With Search'.Properties.Controls.Image.Style.Borders.Radius.TopLeft, 'Header With Search'.Properties.Style.Borders.Radius.TopLeft)
+            RadiusTopRight: |
+                =Coalesce('Header With Search'.Properties.Controls.Image.Style.Borders.Radius.TopRight, 'Header With Search'.Properties.Style.Borders.Radius.TopRight)
+            Visible: =!IsBlank('Header With Search'.HeaderProperties.IconImage)
+            Width: =icoRightHeaderIcon.Width
+            ZIndex: =4
+

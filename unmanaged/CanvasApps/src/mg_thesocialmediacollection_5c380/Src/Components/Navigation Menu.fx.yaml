@@ -280,7 +280,7 @@
     Y: =0
     ZIndex: =1
 
-    galFields_1 As gallery.variableTemplateHeightGallery:
+    galNavFields As gallery.variableTemplateHeightGallery:
         Default: =LookUp(Self.AllItems, ThisRecord.TargetScreen = App.ActiveScreen)
         Height: =Parent.Height
         Items: |-
@@ -329,7 +329,7 @@
         Width: =Parent.Width
         ZIndex: =3
 
-        lblFieldName_1 As label:
+        lblNavScreenName As label:
             AutoHeight: =true
             Color: =If('Navigation Menu'.UseModernTheming, Color.Black, Coalesce('Navigation Menu'.Properties.Controls.Label.Colours.Text, 'Navigation Menu'.Properties.Colours.Text))
             DisplayMode: =ThisItem.'Display Mode'
@@ -342,10 +342,10 @@
             Text: =ThisItem.'Screen Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Self.X
-            Y: =If(lblCategory_1.Visible, lblCategory_1.Height, 10)
+            Y: =If(lblNavCategory.Visible, lblNavCategory.Height, 10)
             ZIndex: =1
 
-        lblContext_1 As label:
+        lblNavContext As label:
             AutoHeight: =true
             Color: =If('Navigation Menu'.UseModernTheming, Color.Black, Coalesce('Navigation Menu'.Properties.Controls.Label.Colours.Text, 'Navigation Menu'.Properties.Colours.Text))
             DisplayMode: =ThisItem.'Display Mode'
@@ -358,18 +358,18 @@
             Size: ='Navigation Menu'.Properties.Style.Font.Sizes.Action
             Text: =ThisItem.Context
             Width: =Parent.Width - (Parent.TemplatePadding * 2) - 20
-            Y: =lblFieldName_1.Y + lblFieldName_1.Height
+            Y: =lblNavScreenName.Y + lblNavScreenName.Height
             ZIndex: =3
 
-        Rectangle2_2 As rectangle:
+        recNavSeperator As rectangle:
             Fill: =If('Navigation Menu'.UseModernTheming, App.Theme.Colors.Lighter60, ColorFade('Navigation Menu'.Properties.Colours.Secondary,60%))
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
-            Y: =lblContext_1.Y + lblContext_1.Height
+            Y: =lblNavContext.Y + lblNavContext.Height
             ZIndex: =7
 
-        lblCategory_1 As label:
+        lblNavCategory As label:
             AutoHeight: =true
             Color: =If('Navigation Menu'.UseModernTheming, Color.Black, Coalesce('Navigation Menu'.Properties.Controls.Label.Colours.Text, 'Navigation Menu'.Properties.Colours.Text))
             DisplayMode: =ThisItem.'Display Mode'

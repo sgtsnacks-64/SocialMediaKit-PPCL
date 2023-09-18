@@ -2,12 +2,12 @@
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
   "ComponentExtraMetadata": {
-    "ComponentDescription": "This is a standard header component that's themeable.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Aliquam eleifend mi in nulla posuere sollicitudin. Iaculis eu non diam phasellus vestibulum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Mauris a diam maecenas sed enim ut sem. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Scelerisque felis imperdiet proin fermentum. Quam id leo in vitae. Quam viverra orci sagittis eu volutpat odio. Turpis tincidunt id aliquet risus feugiat in ante. Sit amet volutpat consequat mauris. Nam aliquam sem et tortor consequat id porta nibh venenatis. Porttitor rhoncus dolor purus non enim praesent elementum. Volutpat est velit egestas dui. Amet facilisis magna etiam tempor orci eu. Turpis massa tincidunt dui ut.\n\nPurus viverra accumsan in nisl nisi scelerisque eu ultrices. Consequat interdum varius sit amet mattis. Nulla pellentesque dignissim enim sit amet. Fermentum odio eu feugiat pretium nibh. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Iaculis at erat pellentesque adipiscing commodo elit at. Enim facilisis grav"
+    "ComponentDescription": "This is a standard header component that's themeable."
   },
   "ComponentManifest": {
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
-    "Description": "This is a standard header component that's themeable.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Aliquam eleifend mi in nulla posuere sollicitudin. Iaculis eu non diam phasellus vestibulum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Mauris a diam maecenas sed enim ut sem. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Scelerisque felis imperdiet proin fermentum. Quam id leo in vitae. Quam viverra orci sagittis eu volutpat odio. Turpis tincidunt id aliquet risus feugiat in ante. Sit amet volutpat consequat mauris. Nam aliquam sem et tortor consequat id porta nibh venenatis. Porttitor rhoncus dolor purus non enim praesent elementum. Volutpat est velit egestas dui. Amet facilisis magna etiam tempor orci eu. Turpis massa tincidunt dui ut.\n\nPurus viverra accumsan in nisl nisi scelerisque eu ultrices. Consequat interdum varius sit amet mattis. Nulla pellentesque dignissim enim sit amet. Fermentum odio eu feugiat pretium nibh. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Iaculis at erat pellentesque adipiscing commodo elit at. Enim facilisis grav",
+    "Description": "This is a standard header component that's themeable.",
     "Name": "Header",
     "TemplateGuid": "46ba40fd6a1b4c13b231b32b28aca061"
   },
@@ -87,7 +87,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638302904815552617",
+  "LastModifiedTimestamp": "638306260918539123",
   "Name": "46ba40fd6a1b4c13b231b32b28aca061",
   "OverridableProperties": {},
   "TemplateOriginalName": "db3959bf63214c149d274aa4832cd32b",

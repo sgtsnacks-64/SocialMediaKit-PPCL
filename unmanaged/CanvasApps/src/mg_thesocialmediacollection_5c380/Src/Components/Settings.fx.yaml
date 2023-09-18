@@ -505,7 +505,7 @@ Settings As CanvasComponent:
             Y: =lblFieldName.Y + lblFieldName.Height / 2 - Self.Height / 2
             ZIndex: =6
 
-        Rectangle2 As rectangle:
+        recSettingsSpacer As rectangle:
             Fill: =If(Settings.UseModernTheming, App.Theme.Colors.Lighter60, ColorFade(Settings.Properties.Colours.Secondary,60%))
             Height: =1
             OnSelect: =Select(Parent)

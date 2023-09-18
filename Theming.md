@@ -34,7 +34,7 @@ Add any of the components from "The Social Media Kit" into your Canvas App and h
     */
     Colours: {
         Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
-        Secondary: ColorValue("#555555"),       //Covers 
+        Secondary: ColorValue("#555555"),       //Covers secondary colour accents
         Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
         Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
         Text: Color.Black
@@ -97,7 +97,7 @@ A theme must cover most, if not all controls and generally speaking, most, if no
     */
     Colours: {
         Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
-        Secondary: ColorValue("#555555"),       //Covers 
+        Secondary: ColorValue("#555555"),       //Covers secondary colour accents 
         Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
         Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
         Text: Color.Black
@@ -162,7 +162,7 @@ In the following example, we have a component that contains a Label control. We 
     */
     Colours: {
         Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
-        Secondary: ColorValue("#555555"),       //Covers 
+        Secondary: ColorValue("#555555"),       //Covers secondary colour accents 
         Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
         Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
         Text: Color.Black
@@ -242,7 +242,7 @@ App.OnStart =
         */
         Colours: {
             Primary: ColorValue("#005d99"),         //Covers Fills for Actionable Controls (i.e. Buttons, Toggles, Checkboxes), Icon Colours
-            Secondary: ColorValue("#555555"),       //Covers 
+            Secondary: ColorValue("#555555"),       //Covers secondary colour accents 
             Border: ColorValue("#005d99"),          //Specifically for border colours of controls such as text boxes, drop downs
             Background: Color.White,                 //Covers the background of the component itself, for Controls, this will control the Fill property
             Text: Color.Black
